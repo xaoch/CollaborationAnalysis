@@ -1,6 +1,8 @@
 # This is a sample Python script.
 import cv2
 import numpy as np
+import sys
+import getopt
 import time
 
 # Press Shift+F10 to execute it or replace it with your code.
@@ -57,32 +59,27 @@ def dewarp(video,output):
         count=count+1
     print("Video unwarped with "+ str(count)+ " frames")
 
-
-
-    # do an unwarping and show it to us
-    cv2.imwrite("output.png", result)
-
 def main(argv):
    inputfile = ''
    outputfile = ''
    try:
       opts, args = getopt.getopt(argv,"hi:o:",["ifile=","ofile="])
    except getopt.GetoptError:
-      print 'test.py -i <inputfile> -o <outputfile>'
+      print('test.py -i <inputfile> -o <outputfile>')
       sys.exit(2)
    for opt, arg in opts:
       if opt == '-h':
-         print 'test.py -i <inputfile> -o <outputfile>'
+         print('test.py -i <inputfile> -o <outputfile>')
          sys.exit()
       elif opt in ("-i", "--ifile"):
          inputfile = arg
       elif opt in ("-o", "--ofile"):
          outputfile = arg
-   print 'Input file is "', inputfile
-   print 'Output file is "', outputfile
+   dewarp(inputfile,outputfile)
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    main(sys.argv[1:])
 
 
 
