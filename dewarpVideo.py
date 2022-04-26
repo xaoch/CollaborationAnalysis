@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 import sys
 import getopt
+import logging
 import time
 
 # Press Shift+F10 to execute it or replace it with your code.
@@ -31,8 +32,8 @@ def unwarp(img, xmap, ymap):
     return output #result
 
 def dewarp(video,output):
-    print("Input Video: ",video)
-    print("Output Video: ",output)
+    logging.info("Input Video: "+video)
+    logging.info("Output Video: "+output)
     vidcap = cv2.VideoCapture(video)
 
     success, image = vidcap.read()
@@ -60,9 +61,9 @@ def dewarp(video,output):
         success, image = vidcap.read()
         count=count+1
         if(count % 1000 == 0):
-            print("Frame: "+ str(count)+ " completed")
+            logging.info("Frame: "+ str(count)+ " completed")
     outvid.release()
-    print("Video unwarped with "+ str(count)+ " frames")
+    logging.info("Video unwarped with "+ str(count)+ " frames")
 
 def main(argv):
    inputfile = ''

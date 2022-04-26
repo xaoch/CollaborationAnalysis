@@ -18,7 +18,7 @@ pip install -U numpy
 pip install opencv-python
 
 OUTFILE=$SCRATCH/$2
-DATAFILE=$SCRATCH/$2
+DATAFILE=$SCRATCH/$1
 DIR=$USER/Code/CollaborationAnalysis
 cd $DIR
 python ./dewarpVideo.py -i $DATAFILE -o $OUTFILE
