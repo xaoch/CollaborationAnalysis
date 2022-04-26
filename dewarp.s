@@ -21,4 +21,4 @@ DATADIR=$SCRATCH/data
 mkdir -p $OUTDIR
 DIR=$USER/Code/CollaborationAnalysis
 cd $DIR
-python dewarp.py $DATADIR/Four.mp4 $OUTDIR/FourDewarped.mp4
+python dewarpVideo.py $DATADIR/Four.mp4 $OUTDIR/FourDewarped.mp4
