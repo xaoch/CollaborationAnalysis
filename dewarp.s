@@ -17,9 +17,8 @@ pip install --no-index --upgrade pip
 pip install -U numpy
 pip install opencv-python
 
-OUTDIR=$SCRATCH/dewarped
-DATADIR=$SCRATCH/data
-mkdir -p $OUTDIR
+OUTFILE=$SCRATCH/$2
+DATAFILE=$SCRATCH/$2
 DIR=$USER/Code/CollaborationAnalysis
 cd $DIR
-python ./dewarpVideo.py -i $DATADIR/Four.mp4 -o $OUTDIR/FourDewarped.mp4
+python ./dewarpVideo.py -i $DATAFILE -o $OUTFILE
