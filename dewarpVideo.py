@@ -31,6 +31,8 @@ def unwarp(img, xmap, ymap):
     return output #result
 
 def dewarp(video,output):
+    print("Input Video: ",video)
+    print("Output Video: ",output)
     vidcap = cv2.VideoCapture(video)
 
     success, image = vidcap.read()
