@@ -52,7 +52,7 @@ def dewarp(video,output):
 
     size = (Wd, Hd)
     fps = vidcap.get(cv2.CAP_PROP_FPS)
-    outvid = cv2.VideoWriter(output, cv2.VideoWriter_fourcc(*'X264'), fps, size)
+    outvid = cv2.VideoWriter(output, cv2.VideoWriter_fourcc(*'MP4V'), fps, size)
     count=0
     while success:
         result = unwarp(image, xmap, ymap)
