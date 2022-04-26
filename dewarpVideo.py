@@ -57,6 +57,8 @@ def dewarp(video,output):
         outvid.write(result)
         success, image = vidcap.read()
         count=count+1
+        if(count % 1000 == 0):
+            print("Frame: "+ str(count)+ " completed")
     outvid.release()
     print("Video unwarped with "+ str(count)+ " frames")
 
