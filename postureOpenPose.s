@@ -10,6 +10,7 @@
 #SBATCH --mail-user=xavier.ochoa@nyu.edu
 #SBATCH --output=slurm_poseExtraction%j.out
 
+
 OUTFILE=$2
 OUTJSON=$3
 VIDEOFILE=$1
