@@ -10,7 +10,6 @@
 #SBATCH --mail-user=xavier.ochoa@nyu.edu
 #SBATCH --output=slurm_poseExtraction%j.out
 
-module purge
 OUTFILE=$2
 OUTJSON=$3
 VIDEOFILE=$1
