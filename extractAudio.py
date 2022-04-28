@@ -1,4 +1,6 @@
 import moviepy.editor as mp
+import sys
+import getopt
 
 def extract(video,output):
    my_clip = mp.VideoFileClip(video)
