@@ -2,7 +2,8 @@ import moviepy.editor as mp
 
 def extract(video,output):
    my_clip = mp.VideoFileClip(video)
-   my_clip.audio.write_audiofile(output)
+   my_clip.audio.write_audiofile(output,codec='pcm_s16le')
+
 
 def main(argv):
    inputfile = ''
