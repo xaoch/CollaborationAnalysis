@@ -3,7 +3,7 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --gres=gpu:rtx8000:1
-#SBATCH --time=12:00:00
+#SBATCH --time=8:00:00
 #SBATCH --mem=4GB
 #SBATCH --job-name=poseExtraction
 #SBATCH --mail-type=END
