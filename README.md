@@ -8,10 +8,7 @@ sbatch dewarp.s \
 
 ## Extract Poses
 
-sbatch postureOpenPose.s \ 
-    /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeDewarped.mp4 \
-    /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreePostures.avi \
-    /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/postures/
+sbatch postureOpenPose.s /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreePostures.avi /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/postures/
 
 ## Correct Posture Video
 
