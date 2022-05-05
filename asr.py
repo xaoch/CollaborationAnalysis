@@ -147,7 +147,7 @@ class ChunkBufferDecoder:
             for pred in preds:
                 self.all_preds.append(pred.cpu().numpy())
 
-    def decode_final(self, merge=False, extra=0):
+    def decode_final(self, merge=True, extra=0):
         self.unmerged = []
         self.toks_unmerged = []
         # index for the first token corresponding to a chunk of audio would be len(decoded) - 1 - delay
@@ -216,6 +216,6 @@ for chunk in chunk_reader:
 
 stride = 4 # 8 for Citrinet
 asr_decoder = ChunkBufferDecoder(model, stride=stride, chunk_len_in_secs=chunk_len_in_secs, buffer_len_in_secs=buffer_len_in_secs )
-transcription = asr_decoder.transcribe_buffers(buffer_list)
+transcription = asr_decoder.transcribe_buffers(buffer_list,False)
 
 print(transcription)
