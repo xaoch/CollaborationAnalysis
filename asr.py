@@ -124,6 +124,7 @@ class ChunkBufferDecoder:
         feature_stride = asr_model._cfg.preprocessor['window_stride']
         self.model_stride_in_secs = feature_stride * stride
         self.n_tokens_per_chunk = math.ceil(self.chunk_len / self.model_stride_in_secs)
+        print(self.n_tokens_per_chunk)
         self.blank_id = len(asr_model.decoder.vocabulary)
 
     @torch.no_grad()
