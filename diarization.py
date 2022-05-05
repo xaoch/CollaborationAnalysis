@@ -8,7 +8,7 @@ import getopt
 
 
 def extract(audio,output):
-    AUDIO_FILE = {'uri': audio, 'audio': audio}
+    AUDIO_FILE = {'uri': "audio", 'audio': '/scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/Three.wav'}
     pipeline = torch.hub.load('pyannote/pyannote-audio', 'dia')
     diarization = pipeline(AUDIO_FILE)
     print(diarization)
