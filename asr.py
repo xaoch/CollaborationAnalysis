@@ -160,6 +160,7 @@ class ChunkBufferDecoder:
             decoded_frames.append(ids)
             all_toks.append(toks)
 
+        print(all_toks)
         for decoded in decoded_frames:
             self.unmerged += decoded[len(decoded) - 1 - delay:len(decoded) - 1 - delay + self.n_tokens_per_chunk]
 
