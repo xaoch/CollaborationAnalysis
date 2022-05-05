@@ -144,6 +144,7 @@ class ChunkBufferDecoder:
             log_probs, encoded_len, predictions = self.asr_model(input_signal=audio_signal,
                                                                  input_signal_length=audio_signal_len)
             preds = torch.unbind(predictions)
+            print(log_probs.shape)
             print("Predictions: ",preds)
             for pred in preds:
                 self.all_preds.append(pred.cpu().numpy())
