@@ -194,7 +194,9 @@ class ChunkBufferDecoder:
 audio_path = '/scratch/xao1/asr/Three16.wav' # wav 16bit mono
 
 samples = get_samples(audio_path)
+print(samples)
 sample_rate  = model.preprocessor._cfg['sample_rate']
+print("Sample rate: ", sample_rate)
 
 chunk_len_in_secs = 8
 context_len_in_secs = 4
@@ -202,6 +204,7 @@ context_len_in_secs = 4
 buffer_len_in_secs = chunk_len_in_secs + 2* context_len_in_secs
 
 buffer_len = sample_rate*buffer_len_in_secs
+print("Buffer lenght: ", buffer_len)
 sampbuffer = np.zeros([buffer_len], dtype=np.float32)
 
 chunk_reader = AudioChunkIterator(samples, chunk_len_in_secs, sample_rate)

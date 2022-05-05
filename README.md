@@ -36,4 +36,8 @@ singularity exec --nv \
 
 SINGULARITY_IMAGE=/scratch/work/public/singularity/ubuntu-20.04.1.sif
 OVERLAY_FILE=/scratch/work/public/examples/greene-getting-started/overlay-15GB-500K-pytorch.ext3
-## Note: this overlay file has PyTorch installed using command
+singularity exec --nv --overlay $OVERLAY_FILE $SINGULARITY_IMAGE /bin/bash
+
+source /ext3/miniconda3/bin/activate
+
+conda activate /scratch/xao1/asr/nemo
