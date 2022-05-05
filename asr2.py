@@ -15,8 +15,8 @@ import pprint
 pp = pprint.PrettyPrinter(indent=4)
 data_dir="/scratch/xao1/asr"
 ROOT = os.getcwd()
-data_dir = os.path.join(ROOT,'data')
-os.makedirs(data_dir, exist_ok=True)
+#data_dir = os.path.join(ROOT,'data')
+#os.makedirs(data_dir, exist_ok=True)
 
 
 AUDIO_FILENAME = "/scratch/xao1/asr/Three16.wav"
