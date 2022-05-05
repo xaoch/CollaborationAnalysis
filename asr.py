@@ -147,7 +147,7 @@ class ChunkBufferDecoder:
             for pred in preds:
                 self.all_preds.append(pred.cpu().numpy())
 
-    def decode_final(self, merge=True, extra=0):
+    def decode_final(self, merge=False, extra=0):
         self.unmerged = []
         self.toks_unmerged = []
         # index for the first token corresponding to a chunk of audio would be len(decoded) - 1 - delay
@@ -184,7 +184,6 @@ class ChunkBufferDecoder:
         previous = self.blank_id
         for p in preds:
             if (p != previous or previous == self.blank_id) and p != self.blank_id:
-                print(p.item())
                 decoded_prediction.append(p.item())
             previous = p
         hypothesis = self.asr_model.tokenizer.ids_to_text(decoded_prediction)

@@ -33,3 +33,7 @@ singularity exec --nv \
 singularity exec --nv \
 	    /scratch/work/public/singularity/cuda11.1.1-cudnn8-devel-ubuntu20.04.sif \
 	    /bin/bash /home/xao1/Code/CollaborationAnalysis/extractPoses.sh $VIDEOFILE $OUTFILE $OUTJSON
+
+SINGULARITY_IMAGE=/scratch/work/public/singularity/ubuntu-20.04.1.sif
+OVERLAY_FILE=/scratch/work/public/examples/greene-getting-started/overlay-15GB-500K-pytorch.ext3
+## Note: this overlay file has PyTorch installed using command
