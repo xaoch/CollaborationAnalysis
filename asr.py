@@ -164,7 +164,6 @@ class ChunkBufferDecoder:
             self.unmerged += decoded[len(decoded) - 1 - delay:len(decoded) - 1 - delay + self.n_tokens_per_chunk]
 
         if not merge:
-            print(self.unmerged)
             return self.unmerged
         return self.greedy_merge(self.unmerged)
 
