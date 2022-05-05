@@ -185,7 +185,8 @@ class ChunkBufferDecoder:
         for p in preds:
             if (p != previous or previous == self.blank_id) and p != self.blank_id:
                 decoded_prediction.append(p.item())
-            previous = p
+                print(self.asr_model.tokenizer.ids_to_text([p.item()]))
+                previous = p
         hypothesis = self.asr_model.tokenizer.ids_to_text(decoded_prediction)
         return hypothesis
 
@@ -215,6 +216,6 @@ for chunk in chunk_reader:
 
 stride = 4 # 8 for Citrinet
 asr_decoder = ChunkBufferDecoder(model, stride=stride, chunk_len_in_secs=chunk_len_in_secs, buffer_len_in_secs=buffer_len_in_secs )
-transcription = asr_decoder.transcribe_buffers(buffer_list,False)
+transcription = asr_decoder.transcribe_buffers(buffer_list,True)
 
 print(transcription)
