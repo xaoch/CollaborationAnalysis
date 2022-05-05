@@ -23,9 +23,7 @@ AUDIO_FILENAME = "/scratch/xao1/asr/Three16.wav"
 
 signal, sample_rate = librosa.load(AUDIO_FILENAME, sr=None)
 
-CONFIG_URL = "https://raw.githubusercontent.com/NVIDIA/NeMo/main/examples/speaker_tasks/diarization/conf/offline_diarization_with_asr.yaml"
-
-CONFIG = wget.download(CONFIG_URL, "scratch/xao1/asr")
+CONFIG = os.path.join(data_dir,'offline_diarization_with_asr.yaml')
 
 cfg = OmegaConf.load(CONFIG)
 print(OmegaConf.to_yaml(cfg))
