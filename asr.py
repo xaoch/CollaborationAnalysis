@@ -9,6 +9,7 @@ import librosa
 
 # To get an overview of existing pre-trained models run nemo_asr.models.EncDecCTCModelBPE.list_available_models()
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
+print("Device is ",device)
 model = nemo_asr.models.EncDecCTCModelBPE.from_pretrained("stt_en_conformer_ctc_large", map_location=device)
 
 
