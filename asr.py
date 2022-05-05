@@ -169,7 +169,8 @@ class ChunkBufferDecoder:
             for p in perbuffer:
                 if (p != previous or previous == self.blank_id) and p != self.blank_id:
                     valid.append(p.item())
-                    print(self.asr_model.tokenizer.ids_to_text([p.item()]))
+                    text=self.asr_model.tokenizer.ids_to_text([p.item()])
+                    print(text,len(text),len(p.item()))
                     previous = p
             print("Frame: ",frame)
             print(self.asr_model.tokenizer.ids_to_text(valid))
