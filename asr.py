@@ -161,7 +161,7 @@ class ChunkBufferDecoder:
         all_toks = []
         for pred in self.all_preds:
             ids, toks = self._greedy_decoder(pred, self.asr_model.tokenizer)
-            print(zip(ids,toks))
+            print(list(zip(ids,toks)))
             decoded_frames.append(ids)
             all_toks.append(toks)
 
