@@ -163,10 +163,9 @@ class ChunkBufferDecoder:
             all_toks.append(toks)
 
         for decoded in decoded_frames:
-            print("Selection: ")
-            print(len(decoded) - 1 - delay,len(decoded) - 1 - delay + self.n_tokens_per_chunk)
-            self.unmerged += decoded[len(decoded) - 1 - delay:len(decoded) - 1 - delay + self.n_tokens_per_chunk]
 
+            self.unmerged += decoded[len(decoded) - 1 - delay:len(decoded) - 1 - delay + self.n_tokens_per_chunk]
+            print(self.unmerged)
         if not merge:
             return self.unmerged
         return self.greedy_merge(self.unmerged)
@@ -189,7 +188,6 @@ class ChunkBufferDecoder:
         for p in preds:
             if (p != previous or previous == self.blank_id) and p != self.blank_id:
                 decoded_prediction.append(p.item())
-                print(self.asr_model.tokenizer.ids_to_text([p.item()]))
                 previous = p
         hypothesis = self.asr_model.tokenizer.ids_to_text(decoded_prediction)
         return hypothesis
