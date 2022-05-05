@@ -159,11 +159,12 @@ class ChunkBufferDecoder:
         all_toks = []
         for pred in self.all_preds:
             ids, toks = self._greedy_decoder(pred, self.asr_model.tokenizer)
-            print(list(zip(ids,toks)))
             decoded_frames.append(ids)
             all_toks.append(toks)
 
         for decoded in decoded_frames:
+            print("Selection: ")
+            print(len(decoded) - 1 - delay,len(decoded) - 1 - delay + self.n_tokens_per_chunk)
             self.unmerged += decoded[len(decoded) - 1 - delay:len(decoded) - 1 - delay + self.n_tokens_per_chunk]
 
         if not merge:
