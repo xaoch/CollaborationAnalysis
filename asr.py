@@ -161,11 +161,13 @@ class ChunkBufferDecoder:
             ids, toks = self._greedy_decoder(pred, self.asr_model.tokenizer)
             decoded_frames.append(ids)
             all_toks.append(toks)
-
+        frame=0
         for decoded in decoded_frames:
-
-            self.unmerged += decoded[len(decoded) - 1 - delay:len(decoded) - 1 - delay + self.n_tokens_per_chunk]
-            print(self.unmerged)
+            perbuffer = decoded[len(decoded) - 1 - delay:len(decoded) - 1 - delay + self.n_tokens_per_chunk]
+            print("Frame: ",frame)
+            print(self.asr_model.tokenizer.ids_to_text(perbuffer))
+            self.unmerged += perbuffer
+            frame=frame+1
         if not merge:
             return self.unmerged
         return self.greedy_merge(self.unmerged)
