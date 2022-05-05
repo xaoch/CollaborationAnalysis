@@ -68,5 +68,5 @@ asr_ts_decoder = ASR_TIMESTAMPS(**cfg.diarizer)
 asr_model = asr_ts_decoder.set_asr_model()
 word_hyp, word_ts_hyp = asr_ts_decoder.run_ASR(asr_model)
 
-print("Decoded word output dictionary: \n", word_hyp['an4_diarize_test'])
-print("Word-level timestamps dictionary: \n", word_ts_hyp['an4_diarize_test'])
+print("Decoded word output dictionary: \n", word_hyp['Three16'])
+print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16'])
