@@ -124,7 +124,6 @@ class ChunkBufferDecoder:
         feature_stride = asr_model._cfg.preprocessor['window_stride']
         self.model_stride_in_secs = feature_stride * stride
         self.n_tokens_per_chunk = math.ceil(self.chunk_len / self.model_stride_in_secs)
-        print(self.n_tokens_per_chunk)
         self.blank_id = len(asr_model.decoder.vocabulary)
 
     @torch.no_grad()
@@ -218,6 +217,8 @@ for chunk in chunk_reader:
     sampbuffer[:-chunk_len] = sampbuffer[chunk_len:]
     sampbuffer[-chunk_len:] = chunk
     buffer_list.append(np.array(sampbuffer))
+
+print("Buffers: ",len(buffer_list))
 
 stride = 4 # 8 for Citrinet
 asr_decoder = ChunkBufferDecoder(model, stride=stride, chunk_len_in_secs=chunk_len_in_secs, buffer_len_in_secs=buffer_len_in_secs )
