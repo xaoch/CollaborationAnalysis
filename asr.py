@@ -164,8 +164,14 @@ class ChunkBufferDecoder:
         frame=0
         for decoded in decoded_frames:
             perbuffer = decoded[len(decoded) - 1 - delay:len(decoded) - 1 - delay + self.n_tokens_per_chunk]
+            valid=[]
+            previous = self.blank_id
+            for p in perbuffer:
+                if (p != previous or previous == self.blank_id) and p != self.blank_id:
+                    valid.append(p.item())
+                    previous = p
             print("Frame: ",frame)
-            print(self.asr_model.tokenizer.ids_to_text(perbuffer))
+            print(self.asr_model.tokenizer.ids_to_text(valid))
             self.unmerged += perbuffer
             frame=frame+1
         if not merge:
