@@ -154,6 +154,8 @@ class ChunkBufferDecoder:
         self.toks_unmerged = []
         # index for the first token corresponding to a chunk of audio would be len(decoded) - 1 - delay
         delay = math.ceil((self.chunk_len + (self.buffer_len - self.chunk_len) / 2) / self.model_stride_in_secs)
+        print((self.chunk_len + (self.buffer_len - self.chunk_len) / 2))
+        print(self.model_stride_in_secs)
         print("Delay: ",delay)
         decoded_frames = []
         all_toks = []
