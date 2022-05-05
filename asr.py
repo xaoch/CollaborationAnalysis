@@ -12,7 +12,6 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 print("Device is ",device)
 model = nemo_asr.models.EncDecCTCModelBPE.from_pretrained("stt_en_conformer_ctc_large", map_location=device)
 
-
 class AudioChunkIterator():
     def __init__(self, samples, frame_len, sample_rate):
         self._samples = samples
@@ -185,6 +184,7 @@ class ChunkBufferDecoder:
         previous = self.blank_id
         for p in preds:
             if (p != previous or previous == self.blank_id) and p != self.blank_id:
+                print(p.item())
                 decoded_prediction.append(p.item())
             previous = p
         hypothesis = self.asr_model.tokenizer.ids_to_text(decoded_prediction)
