@@ -24,6 +24,10 @@ sbatch extractAudio.s /scratch/xao1/BiochemS1/Session_1_1100_Sensor_2/Two.mp4
 
 sbatch normalizeAudio.s BiochemS1/Session_1_0930_Sensor_3/Three.wav BiochemS1/Session_1_0930_Sensor_3/ThreeNormalized.wav
 
+## Create Transcript
+
+sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeNormalized.wav /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3 5
+
 
 srun --gres=gpu:1 --time=00:20:00 --pty /bin/bash
 
