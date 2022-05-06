@@ -91,6 +91,7 @@ def main(argv):
          outputfile = arg
       elif opt in ("-s", "--speakers"):
          speakers = arg
+   print("Arguments: ",inputfile,outputfile,speakers)
    extract(inputfile,outputfile,speakers)
 
 if __name__ == '__main__':
