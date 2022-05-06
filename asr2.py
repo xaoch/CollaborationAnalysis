@@ -106,8 +106,8 @@ asr_ts_decoder = ASR_TIMESTAMPS(**cfg.diarizer)
 asr_model = asr_ts_decoder.set_asr_model()
 word_hyp, word_ts_hyp = asr_ts_decoder.run_ASR(asr_model)
 
-print("Decoded word output dictionary: \n", word_hyp['an4_diarize_test'])
-print("Word-level timestamps dictionary: \n", word_ts_hyp['an4_diarize_test'])
+print("Decoded word output dictionary: \n", word_hyp['Three16'])
+print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16'])
 
 arpa_model_path = os.path.join(data_dir, '4gram_big.arpa')
 cfg.diarizer.asr.realigning_lm_parameters.arpa_language_model = arpa_model_path
