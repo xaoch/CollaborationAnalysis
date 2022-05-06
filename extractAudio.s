@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=0:30:00
 #SBATCH --mem=2GB
-#SBATCH --job-name=deWarpingVideo
+#SBATCH --job-name=extractAudio
 #SBATCH --mail-type=END
 #SBATCH --mail-user=xavier.ochoa@nyu.edu
 #SBATCH --output=slurm_extractAudio%j.out
