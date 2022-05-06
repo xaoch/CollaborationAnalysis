@@ -18,7 +18,7 @@ sbatch correctPostureVideo.s \
 
 ## Extract Audio
 
-sbatch extractAudio.s /scratch/xao1/BiochemS1/Session_1_1100_Sensor_2/Two.mp4 /scratch/xao1/BiochemS1/Session_1_1100_Sensor_2/Two.wav
+sbatch extractAudio.s /scratch/xao1/BiochemS1/Session_1_1100_Sensor_2/Two.mp4 
 
 ## Normalize Audio
 
