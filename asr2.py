@@ -76,4 +76,4 @@ print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16'])
 asr_diar_offline = ASR_DIAR_OFFLINE(**cfg.diarizer)
 asr_diar_offline.word_ts_anchor_offset = asr_ts_decoder.word_ts_anchor_offset
 diar_hyp, diar_score = asr_diar_offline.run_diarization(cfg, word_ts_hyp)
-print("Diarization hypothesis output: \n", diar_hyp['an4_diarize_test'])
+print("Diarization hypothesis output: \n", diar_hyp['Three16'])
