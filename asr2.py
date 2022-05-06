@@ -70,3 +70,6 @@ word_hyp, word_ts_hyp = asr_ts_decoder.run_ASR(asr_model)
 
 print("Decoded word output dictionary: \n", word_hyp['Three16'])
 print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16'])
+
+diar_hyp, diar_score = asr_diar_offline.run_diarization(cfg, word_ts_hyp)
+print("Diarization hypothesis output: \n", diar_hyp['an4_diarize_test'])
