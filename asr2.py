@@ -42,7 +42,7 @@ meta = {
     'duration':None,
     'label': 'infer',
     'text': '-',
-    'num_speakers': 5,
+    'num_speakers': 2,
     'rttm_filepath': None,
     'uem_filepath' : None
 }
@@ -58,7 +58,7 @@ cfg.diarizer.out_dir = data_dir #Directory to store intermediate files and predi
 cfg.diarizer.speaker_embeddings.model_path = pretrained_speaker_model
 cfg.diarizer.speaker_embeddings.parameters.window_length_in_sec = 1.5
 cfg.diarizer.speaker_embeddings.parameters.shift_length_in_sec = 0.75
-cfg.diarizer.clustering.parameters.oracle_num_speakers=False
+cfg.diarizer.clustering.parameters.oracle_num_speakers=True
 
 # Using VAD generated from ASR timestamps
 cfg.diarizer.asr.model_path = 'stt_en_conformer_ctc_large'
@@ -80,7 +80,7 @@ asr_diar_offline.word_ts_anchor_offset = asr_ts_decoder.word_ts_anchor_offset
 diar_hyp, diar_score = asr_diar_offline.run_diarization(cfg, word_ts_hyp)
 print("Diarization hypothesis output: \n", diar_hyp['Three16Norm'])
 
-asr_diar_offline.get_transcript_with_speaker_labels(diar_hyp, word_hyp, word_ts_hyp)
+#asr_diar_offline.get_transcript_with_speaker_labels(diar_hyp, word_hyp, word_ts_hyp)
 
 
 
