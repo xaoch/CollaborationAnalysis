@@ -23,7 +23,7 @@ ROOT = os.getcwd()
 #os.makedirs(data_dir, exist_ok=True)
 
 
-AUDIO_FILENAME = "/scratch/xao1/asr/Three16.wav"
+AUDIO_FILENAME = "/scratch/xao1/asr/Three16Norm.wav"
 
 signal, sample_rate = librosa.load(AUDIO_FILENAME, sr=None)
 
@@ -72,13 +72,13 @@ asr_ts_decoder = ASR_TIMESTAMPS(**cfg.diarizer)
 asr_model = asr_ts_decoder.set_asr_model()
 word_hyp, word_ts_hyp = asr_ts_decoder.run_ASR(asr_model)
 
-print("Decoded word output dictionary: \n", word_hyp['Three16'])
-print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16'])
+print("Decoded word output dictionary: \n", word_hyp['Three16Norm'])
+print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16Norm'])
 
 asr_diar_offline = ASR_DIAR_OFFLINE(**cfg.diarizer)
 asr_diar_offline.word_ts_anchor_offset = asr_ts_decoder.word_ts_anchor_offset
 diar_hyp, diar_score = asr_diar_offline.run_diarization(cfg, word_ts_hyp)
-print("Diarization hypothesis output: \n", diar_hyp['Three16'])
+print("Diarization hypothesis output: \n", diar_hyp['Three16Norm'])
 
 #asr_diar_offline.get_transcript_with_speaker_labels(diar_hyp, word_hyp, word_ts_hyp)
 
@@ -106,8 +106,8 @@ asr_ts_decoder = ASR_TIMESTAMPS(**cfg.diarizer)
 asr_model = asr_ts_decoder.set_asr_model()
 word_hyp, word_ts_hyp = asr_ts_decoder.run_ASR(asr_model)
 
-print("Decoded word output dictionary: \n", word_hyp['Three16'])
-print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16'])
+print("Decoded word output dictionary: \n", word_hyp['Three16Norm'])
+print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16Norm'])
 
 arpa_model_path = os.path.join(data_dir, '4gram_big.arpa')
 cfg.diarizer.asr.realigning_lm_parameters.arpa_language_model = arpa_model_path
