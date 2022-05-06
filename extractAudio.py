@@ -5,6 +5,7 @@ import getopt
 def extract(video,output):
    my_clip = mp.VideoFileClip(video)
    my_clip.audio.write_audiofile(output,codec='pcm_s16le')
+   print("Finished")
 
 
 def main(argv):
