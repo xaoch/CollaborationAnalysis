@@ -61,7 +61,7 @@ cfg.diarizer.speaker_embeddings.parameters.shift_length_in_sec = 0.75
 cfg.diarizer.clustering.parameters.oracle_num_speakers=True
 
 # Using VAD generated from ASR timestamps
-cfg.diarizer.asr.model_path = 'stt_en_conformer_transducer_xxlarge'
+cfg.diarizer.asr.model_path = 'stt_en_conformer_transducer_xlarge'
 cfg.diarizer.oracle_vad = False # ----> Not using oracle VAD
 cfg.diarizer.asr.parameters.asr_based_vad = True
 cfg.diarizer.asr.parameters.threshold=100 # ASR based VAD threshold: If 100, all silences under 1 sec are ignored.
