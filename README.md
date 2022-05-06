@@ -49,3 +49,7 @@ singularity exec --nv --overlay $OVERLAY_FILE $SINGULARITY_IMAGE /bin/bash
 source /ext3/miniconda3/bin/activate
 
 conda activate /scratch/xao1/asr/nemo
+
+python examples/asr/transcribe_speech.py \
+ pretrained_name="stt_en_conformer_transducer_large" \
+ audio_dir="/scratch/xao1/NeMo/audio"

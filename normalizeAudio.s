@@ -7,7 +7,7 @@
 #SBATCH --job-name=normalizeAudio
 #SBATCH --mail-type=END
 #SBATCH --mail-user=xavier.ochoa@nyu.edu
-#SBATCH --output=slurm_videoDeWarp%j.out
+#SBATCH --output=slurm_normalizeAudio%j.out
 
 module purge
 module load python/intel/3.8.6
