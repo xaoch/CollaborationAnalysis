@@ -85,40 +85,40 @@ asr_diar_offline.get_transcript_with_speaker_labels(diar_hyp, word_hyp, word_ts_
 
 
 
-#def gunzip(file_path, output_path):
-#    with gzip.open(file_path, "rb") as f_in, open(output_path, "wb") as f_out:
-#        shutil.copyfileobj(f_in, f_out)
-#        f_in.close()
-#        f_out.close()
+def gunzip(file_path, output_path):
+    with gzip.open(file_path, "rb") as f_in, open(output_path, "wb") as f_out:
+        shutil.copyfileobj(f_in, f_out)
+        f_in.close()
+        f_out.close()
 
-#ARPA_FILE = os.path.join(data_dir,'4gram_big.arpa.gz')
-#f = ARPA_FILE
-#gunzip(f, f.replace(".gz", ""))
+ARPA_FILE = os.path.join(data_dir,'4gram_big.arpa.gz')
+f = ARPA_FILE
+gunzip(f, f.replace(".gz", ""))
 
-#arpa_model_path = os.path.join(data_dir, '4gram_big.arpa')
-#cfg.diarizer.asr.ctc_decoder_parameters.pretrained_language_model = arpa_model_path
+arpa_model_path = os.path.join(data_dir, '4gram_big.arpa')
+cfg.diarizer.asr.ctc_decoder_parameters.pretrained_language_model = arpa_model_path
 
-#import importlib
-#import nemo.collections.asr.parts.utils.decoder_timestamps_utils as decoder_timestamps_utils
-#importlib.reload(decoder_timestamps_utils) # This module should be reloaded after you install pyctcdecode.
+import importlib
+import nemo.collections.asr.parts.utils.decoder_timestamps_utils as decoder_timestamps_utils
+importlib.reload(decoder_timestamps_utils) # This module should be reloaded after you install pyctcdecode.
 
-#asr_ts_decoder = ASR_TIMESTAMPS(**cfg.diarizer)
-#asr_model = asr_ts_decoder.set_asr_model()
-#word_hyp, word_ts_hyp = asr_ts_decoder.run_ASR(asr_model)
+asr_ts_decoder = ASR_TIMESTAMPS(**cfg.diarizer)
+asr_model = asr_ts_decoder.set_asr_model()
+word_hyp, word_ts_hyp = asr_ts_decoder.run_ASR(asr_model)
 
-#print("Decoded word output dictionary: \n", word_hyp['Three16Norm'])
-#print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16Norm'])
+print("Decoded word output dictionary: \n", word_hyp['Three16Norm'])
+print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16Norm'])
 
-#arpa_model_path = os.path.join(data_dir, '4gram_big.arpa')
-#cfg.diarizer.asr.realigning_lm_parameters.arpa_language_model = arpa_model_path
-#cfg.diarizer.asr.realigning_lm_parameters.logprob_diff_threshold = 1.2
+arpa_model_path = os.path.join(data_dir, '4gram_big.arpa')
+cfg.diarizer.asr.realigning_lm_parameters.arpa_language_model = arpa_model_path
+cfg.diarizer.asr.realigning_lm_parameters.logprob_diff_threshold = 1.2
 
-#import importlib
-#import nemo.collections.asr.parts.utils.diarization_utils as diarization_utils
-#importlib.reload(diarization_utils) # This module should be reloaded after you install arpa.
+import importlib
+import nemo.collections.asr.parts.utils.diarization_utils as diarization_utils
+importlib.reload(diarization_utils) # This module should be reloaded after you install arpa.
 
 # Create a new instance with realigning language model
-#asr_diar_offline = ASR_DIAR_OFFLINE(**cfg.diarizer)
-#asr_diar_offline.word_ts_anchor_offset = asr_ts_decoder.word_ts_anchor_offset
+asr_diar_offline = ASR_DIAR_OFFLINE(**cfg.diarizer)
+asr_diar_offline.word_ts_anchor_offset = asr_ts_decoder.word_ts_anchor_offset
 
-#asr_diar_offline.get_transcript_with_speaker_labels(diar_hyp, word_hyp, word_ts_hyp)
+asr_diar_offline.get_transcript_with_speaker_labels(diar_hyp, word_hyp, word_ts_hyp)
