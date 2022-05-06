@@ -11,7 +11,7 @@ import shutil
 import json
 from nemo.collections.asr.parts.utils.decoder_timestamps_utils import ASR_TIMESTAMPS
 from nemo.collections.asr.parts.utils.diarization_utils import ASR_DIAR_OFFLINE
-import shutil
+import gzip
 
 
 
