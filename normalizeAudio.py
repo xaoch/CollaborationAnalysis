@@ -1,4 +1,7 @@
 from pydub import AudioSegment, effects
+import sys
+import getopt
+
 
 
 def normalize(inputFile,outputFile):
