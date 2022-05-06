@@ -10,6 +10,8 @@ from omegaconf import OmegaConf
 import shutil
 import json
 from nemo.collections.asr.parts.utils.decoder_timestamps_utils import ASR_TIMESTAMPS
+from nemo.collections.asr.parts.utils.diarization_utils import ASR_DIAR_OFFLINE
+
 
 import pprint
 pp = pprint.PrettyPrinter(indent=4)
@@ -71,5 +73,7 @@ word_hyp, word_ts_hyp = asr_ts_decoder.run_ASR(asr_model)
 print("Decoded word output dictionary: \n", word_hyp['Three16'])
 print("Word-level timestamps dictionary: \n", word_ts_hyp['Three16'])
 
+asr_diar_offline = ASR_DIAR_OFFLINE(**cfg.diarizer)
+asr_diar_offline.word_ts_anchor_offset = asr_ts_decoder.word_ts_anchor_offset
 diar_hyp, diar_score = asr_diar_offline.run_diarization(cfg, word_ts_hyp)
 print("Diarization hypothesis output: \n", diar_hyp['an4_diarize_test'])

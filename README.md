@@ -34,6 +34,8 @@ singularity exec --nv \
 	    /scratch/work/public/singularity/cuda11.1.1-cudnn8-devel-ubuntu20.04.sif \
 	    /bin/bash /home/xao1/Code/CollaborationAnalysis/extractPoses.sh $VIDEOFILE $OUTFILE $OUTJSON
 
+srun --gres=gpu:1 --mem=8GB --time=01:00:00 --pty /bin/bash
+
 SINGULARITY_IMAGE=/scratch/work/public/singularity/ubuntu-20.04.1.sif
 OVERLAY_FILE=/scratch/work/public/examples/greene-getting-started/overlay-15GB-500K-pytorch.ext3
 singularity exec --nv --overlay $OVERLAY_FILE $SINGULARITY_IMAGE /bin/bash
