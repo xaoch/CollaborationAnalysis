@@ -8,6 +8,7 @@ def normalize(inputFile,outputFile):
     rawsound = AudioSegment.from_file(inputFile, "wav")
     normalizedsound = effects.normalize(rawsound)
     normalizedsound.export(outputFile, format="wav")
+    print("Finished")
 
 def main(argv):
    inputfile = ''
