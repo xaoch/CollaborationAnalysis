@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --gres=gpu:rtx8000:1
 #SBATCH --time=2:00:00
-#SBATCH --mem=4GB
+#SBATCH --mem=8GB
 #SBATCH --job-name=poseExtraction
 #SBATCH --mail-type=END
 #SBATCH --mail-user=xavier.ochoa@nyu.edu
