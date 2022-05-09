@@ -22,6 +22,7 @@ importlib.reload(diarization_utils)
 def extract(inputfile, outputdirectory, speakers):
     data_dir=outputdirectory
     AUDIO_FILENAME = inputfile
+    print("Audio File: ",AUDIO_FILENAME)
     signal, sample_rate = librosa.load(AUDIO_FILENAME, sr=None)
     CONFIG = "/scratch/xao1/asr/offline_diarization_with_asr.yaml"
     cfg = OmegaConf.load(CONFIG)
