@@ -3,12 +3,12 @@
 #SBATCH --ntasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --gres=gpu:rtx8000:1
-#SBATCH --time=2:00:00
-#SBATCH --mem=8GB
-#SBATCH --job-name=poseExtraction
+#SBATCH --time=0:20:00
+#SBATCH --mem=16GB
+#SBATCH --job-name=createTranscript
 #SBATCH --mail-type=END
 #SBATCH --mail-user=xavier.ochoa@nyu.edu
-#SBATCH --output=slurm_createTrnascript%j.out
+#SBATCH --output=slurm_createTranscript%j.out
 
 
 OUTDIR=$2
