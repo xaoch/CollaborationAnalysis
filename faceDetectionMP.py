@@ -5,9 +5,9 @@ mp_drawing = mp.solutions.drawing_utils
 
 # For webcam input:
 cap = cv2.VideoCapture("/scratch/xao1/Biochem/Session_1_0930_Sensor_3/ThreeDewarped.mp4")
-width = cap.get(cv2.CAP_PROP_FRAME_WIDTH )
-height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT )
-fps =  cap.get(cv2.CAP_PROP_FPS)
+width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH ))
+height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT ))
+fps =  int(cap.get(cv2.CAP_PROP_FPS))
 out = cv2.VideoWriter('out.mp4',cv2.VideoWriter_fourcc('H','2','6','4'), fps, (width,height))
 frame=0
 with mp_face_detection.FaceDetection(
