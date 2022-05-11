@@ -10,6 +10,7 @@ height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT ))
 fps =  int(cap.get(cv2.CAP_PROP_FPS))
 out = cv2.VideoWriter('out.mp4',cv2.VideoWriter_fourcc('H','2','6','4'), fps, (width,height))
 frame=0
+print(width,height,fps)
 with mp_face_detection.FaceDetection(
     model_selection=0, min_detection_confidence=0.5) as face_detection:
   while cap.isOpened():
