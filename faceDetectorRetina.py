@@ -26,8 +26,9 @@ while cap.isOpened():
 
   for key in faces.keys():
       identity=faces[key]
-      #print(identity)
+      print(identity)
       facial_area = identity["facial_area"]
+      print(facial_area)
       cv2.rectangle(image, (facial_area[2], facial_area[3],facial_area[0], facial_area[1]))
 
   out.write(image)
