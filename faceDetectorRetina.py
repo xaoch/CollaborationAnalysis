@@ -2,8 +2,6 @@ import cv2
 from retinaface import RetinaFace
 
 print("Starting")
-mp_face_detection = mp.solutions.face_detection
-mp_drawing = mp.solutions.drawing_utils
 
 # For webcam input:
 cap = cv2.VideoCapture("/scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeDewarped.mp4")
