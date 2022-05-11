@@ -29,7 +29,8 @@ while cap.isOpened():
       print(identity)
       facial_area = identity["facial_area"]
       print(facial_area)
-      cv2.rectangle(image, (facial_area[2], facial_area[3]),(facial_area[0], facial_area[1]))
+      color = (255, 0, 0)
+      cv2.rectangle(image, (facial_area[2], facial_area[3]),(facial_area[0], facial_area[1]),color)
 
   out.write(image)
   if frame==300:
