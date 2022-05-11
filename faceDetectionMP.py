@@ -5,7 +5,7 @@ mp_face_detection = mp.solutions.face_detection
 mp_drawing = mp.solutions.drawing_utils
 
 # For webcam input:
-cap = cv2.VideoCapture("/scratch/xao1/Biochem/Session_1_0930_Sensor_3/ThreeDewarped.mp4")
+cap = cv2.VideoCapture("/scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeDewarped.mp4")
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH ))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT ))
 fps =  int(cap.get(cv2.CAP_PROP_FPS))
