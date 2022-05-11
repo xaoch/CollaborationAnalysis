@@ -4,7 +4,7 @@ from retinaface import RetinaFace
 print("Starting")
 
 # For webcam input:
-cap = cv2.VideoCapture("/scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeDewarped.mp4")
+cap = cv2.VideoCapture("/scratch/xao1/BiochemS1/Session_1_0930_Sensor_4/FourDewarped.mp4")
 width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH ))
 height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT ))
 fps =  int(cap.get(cv2.CAP_PROP_FPS))
@@ -33,6 +33,6 @@ while cap.isOpened():
       cv2.rectangle(image, (facial_area[2], facial_area[3]),(facial_area[0], facial_area[1]),color)
 
   out.write(image)
-  if frame==300:
+  if frame==30:
     break
 cap.release()
