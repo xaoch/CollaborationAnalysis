@@ -28,6 +28,12 @@ sbatch normalizeAudio.s BiochemS1/Session_1_0930_Sensor_3/Three.wav BiochemS1/Se
 
 sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeNormalized.wav /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3 5
 
+## Segmenting People
+
+sbatch segmentingPeople.s \
+    /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeDewarped \
+    /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/people
+
 
 srun --gres=gpu:1 --time=00:20:00 --pty /bin/bash
 srun --time=00:20:00 --pty /bin/bash
