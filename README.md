@@ -30,6 +30,7 @@ sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeN
 
 
 srun --gres=gpu:1 --time=00:20:00 --pty /bin/bash
+srun --time=00:20:00 --pty /bin/bash
 
 singularity exec --nv \
       --overlay /scratch/work/public/singularity/openpose1.7.0-cuda11.1.1-cudnn8-devel-ubuntu20.04-dep.sqf:ro \
@@ -53,3 +54,14 @@ conda activate /scratch/xao1/asr/nemo
 python examples/asr/transcribe_speech.py \
  pretrained_name="stt_en_conformer_transducer_large" \
  audio_dir="/scratch/xao1/NeMo/audio"
+
+
+singularity exec \
+      --overlay /scratch/work/public/singularity/openpose1.7.0-cuda11.1.1-cudnn8-devel-ubuntu20.04-dep.sqf:ro \
+	    /scratch/work/public/singularity/cuda11.1.1-cudnn8-devel-ubuntu20.04.sif \
+	    /bin/bash 
+
+ffmpeg -y -i FourDewarped.mp4 -vf normalize=blackpt=black:whitept=white:smoothing=0 FourNormalized.mp4
+
+VIDEOFILE=/scratch/xao1/
+/home/xao1/Code/CollaborationAnalysis/extractPoses.sh $VIDEOFILE $OUTFILE $OUTJSON
