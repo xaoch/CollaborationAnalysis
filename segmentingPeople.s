@@ -19,6 +19,6 @@ OVERLAY_FILE=/scratch/work/public/examples/greene-getting-started/overlay-15GB-5
 singularity exec --nv --overlay $OVERLAY_FILE $SINGULARITY_IMAGE /bin/bash /home/xao1/Code/CollaborationAnalysis/segmentingPeople.sh $VIDEOFILE $OUTDIR
 
 cd $OUTJSON
-cd ..
+cd exp
 tar -zcvf labels.tar.gz labels
 rm -rf labels
