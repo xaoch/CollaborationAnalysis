@@ -18,7 +18,7 @@ SINGULARITY_IMAGE=/scratch/work/public/singularity/ubuntu-20.04.1.sif
 OVERLAY_FILE=/scratch/work/public/examples/greene-getting-started/overlay-15GB-500K-pytorch.ext3
 singularity exec --nv --overlay $OVERLAY_FILE $SINGULARITY_IMAGE /bin/bash /home/xao1/Code/CollaborationAnalysis/segmentingPeople.sh $VIDEOFILE $OUTDIR
 
-cd $OUTJSON
+cd $OUTDIR
 cd exp
 tar -zcvf labels.tar.gz labels
 rm -rf labels

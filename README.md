@@ -98,8 +98,41 @@ sbatch createTranscript.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_8/EightN
 
 ## Segmenting People
 
-sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/ThreeDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_0930_Sensor_3/
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_0930_Sensor_4/FourDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_0930_Sensor_4/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1100_Sensor_2/TwoDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1100_Sensor_2/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1100_Sensor_5/FiveDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1100_Sensor_5/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1100_Sensor_6/SixDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1100_Sensor_6/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1100_Sensor_7/SevenDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1100_Sensor_7/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1100_Sensor_9/NineDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1100_Sensor_9/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1230_Sensor_3/ThreeDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1230_Sensor_3/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1230_Sensor_4/FourDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1230_Sensor_4/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1230_Sensor_5/FiveDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1230_Sensor_5/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1230_Sensor_8/EightDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1230_Sensor_8/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1400_Sensor_1/OneDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1400_Sensor_1/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1400_Sensor_3/ThreeDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1400_Sensor_3/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1400_Sensor_5/FiveDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1400_Sensor_5/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1400_Sensor_6/SixDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1400_Sensor_6/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1400_Sensor_7/SevenDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1400_Sensor_7/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_1_1400_Sensor_9/NineDewarped.mp4 /scratch/xao1/BiochemS1/Session_1_1400_Sensor_9/people
 
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_0930_Sensor_1/OneDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_0930_Sensor_1/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_0930_Sensor_2/TwoDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_0930_Sensor_2/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_0930_Sensor_3/ThreeDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_0930_Sensor_3/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1100_Sensor_5/FiveDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1100_Sensor_5/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1100_Sensor_6/SixDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1100_Sensor_6/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1100_Sensor_7/SevenDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1100_Sensor_7/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1100_Sensor_8/EightDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1100_Sensor_8/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1230_Sensor_2/TwoDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1230_Sensor_2/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1230_Sensor_3/ThreeDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1230_Sensor_3/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1230_Sensor_4/FourDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1230_Sensor_4/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1230_Sensor_9/NineDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1230_Sensor_9/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_1/OneDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1400_Sensor_1/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_2/TwoDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1400_Sensor_2/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_5/FiveDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1400_Sensor_5/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_6/SixDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1400_Sensor_6/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_7/SevenDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1400_Sensor_7/people
+sbatch segmentingPeople.s /scratch/xao1/BiochemS1/Session_2_1400_Sensor_8/EightDewarped.mp4 /scratch/xao1/BiochemS1/Session_2_1400_Sensor_8/people
 
 srun --gres=gpu:1 --time=00:20:00 --pty /bin/bash
 srun --time=00:20:00 --pty /bin/bash
